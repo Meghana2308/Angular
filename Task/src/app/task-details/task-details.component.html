@@ -1,0 +1,44 @@
+
+<section class="container-fluid bg-light p-5">
+    <h3>Contact</h3>
+    <div class="card" *ngIf="task==null">
+        <p class="card-text">No Task Found</p>
+    </div>
+    <table class="table w-50 table-bordered" *ngIf="Task!=null">
+        <tr>
+            <th>Task#</th>
+            <td>{{task.taskID}}</td>
+        </tr>
+        <tr>
+            <th>Full Name</th>
+            <td>{{task.firstName}}{{task.lastName}}</td>
+        </tr>
+        <tr>
+            <th>Mobile</th>
+            <td>{{task.mobileNumber}}</td>
+        </tr>
+        <tr>
+            <th>Alternate Mobile</th>
+            <td>{{task.alternateMobileNumber}}</td>
+        </tr>
+        <tr>
+            <th>Mail</th>
+            <td>{{task.mailId}}</td>
+        </tr>
+        <tr>
+            <th>Organization</th>
+            <td>{{task.organization}}</td>
+        </tr>
+        <tr>
+            <th>Date Of Birth</th>
+            <td>{{task.dob | date:'dd-MMM-yyyy'}}</td>
+        </tr>
+        <tr>
+            <th colspan="2" class="pull-right">
+                <a class="btn btn-success btn-sm mr-2"
+              >EDIT</a>
+            </th>
+        </tr>
+    </table>
+    
+</section>

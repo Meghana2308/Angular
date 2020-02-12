@@ -1,0 +1,43 @@
+<section class="container-fluid bg-light p-5">
+    <h3>Contact</h3>
+    <div class="card" *ngIf="contact==null">
+        <p class="card-text">No Contact Found</p>
+    </div>
+    <table class="table w-50 table-bordered" *ngIf="contact!=null">
+        <tr>
+            <th>Contact#</th>
+            <td>{{contact.contactID}}</td>
+        </tr>
+        <tr>
+            <th>Full Name</th>
+            <td>{{contact.firstName}}{{contact.lastName}}</td>
+        </tr>
+        <tr>
+            <th>Mobile</th>
+            <td>{{contact.mobileNumber}}</td>
+        </tr>
+        <tr>
+            <th>Alternate Mobile</th>
+            <td>{{contact.alternateMobileNumber}}</td>
+        </tr>
+        <tr>
+            <th>Mail</th>
+            <td>{{contact.mailId}}</td>
+        </tr>
+        <tr>
+            <th>Organization</th>
+            <td>{{contact.organization}}</td>
+        </tr>
+        <tr>
+            <th>Date Of Birth</th>
+            <td>{{contact.dob | date:'dd-MMM-yyyy'}}</td>
+        </tr>
+        <tr>
+            <th colspan="2" class="pull-right">
+                <a class="btn btn-success btn-sm mr-2"
+              >EDIT</a>
+            </th>
+        </tr>
+    </table>
+    
+</section>
